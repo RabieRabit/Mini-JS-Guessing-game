@@ -14,8 +14,14 @@ function startfunc(){
 }
 
 function checkGuess(num) {
+    let toHigh;
     while (myNum != num){
-        num = window.prompt("Guess Again!");
+        if (num > myNum) {
+            toHigh = "to high"
+        } else {
+            toHigh = "to Low"
+        }
+        num = window.prompt("Guess Again! " + toHigh);
     }
     alert("Well Done you did it! The num was " + myNum)
 }
